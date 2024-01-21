@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <title>Portfolio</title>
+    <style>
+      body {
+        margin: 0;
+        overflow-y: auto;
+        overflow-x: auto;
+        padding: 0;
+        background-color: #fff;
+        align-items: center;
+        justify-content: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        flex-direction: column;
+        height: 100vh;
+      }
+      h2,
+      h3 {
+        color: rgb(16, 16, 16);
+        font-size: 20px;
+        margin: 10px;
+        font-weight: 400;
+        font-family: Georgia, "Times New Roman", Times, serif;
+        backdrop-filter: blur(10px);
+      }
+      h2 {
+        font-weight: 600;
+        background-color: #000000;
+        border-radius: 50px;
+        width: fit-content;
+        padding: 10px;
+        margin-top: 40px;
+      }
+      h3 {
+        max-width: 500px;
+        background-color: #0000004c;
+        border-radius: 50px;
+        margin-left: 20px;
+        color: rgb(179, 194, 232);
+        word-spacing: 5;
+        padding: 20px;
+      }
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        margin: 0;
+        color: white;
+        background-color: rgb(219, 220, 221);
+        position: relative;
+      }
+
+      .nav-brand {
+        font-size: 24px;
+        font-weight: 700;
+        margin-left: 0;
+      }
+      .nav-content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: rgba(92, 120, 148, 0.297);
+        transition: max-height 0.8s ease-in-out;
+        max-height: 0;
+        overflow: hidden;
+      }
+      .navbar:hover .nav-content {
+        max-height: 300px;
+      }
+      a {
+        margin: 10px 0;
+        padding: 0;
+      }
+
+      .button {
+        width: 130px;
+        padding: 10px;
+        margin-top: 30px;
+        margin-left: 20px;
+        border-radius: 30px;
+      }
+
+      img {
+        width: 30px;
+        transition: all 0.3s;
+      }
+      .cards {
+        display: flex;
+        padding: 10px;
+        margin: 10px;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin: 10px;
+      }
+
+      img {
+        object-fit: cover;
+        border: 50px;
+        
+      }
+      .card {
+        width: calc(33.33% - 20px);
+        margin: 10px;
+        padding: 0;
+        margin-bottom: 30px;
+        font-size: smaller;
+        height: 30rem;
+        background-color: #cac6c660;
+        border-radius: 20px;
+        transition-duration: 0.6s;
+      }
+      
+      .card img:hover {
+        transform: scale(1.12);
+        border: 80px;
+      }
+      .card:hover{
+        box-shadow: 0px 0px 10px  rgb(74, 70, 70);
+
+
+      }
+      .modal-body {
+        padding: 20px;
+        height: 250px;
+        font-size: larger;
+      }
+      .footer {
+        background-color: #333;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        margin-top:70%;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <div class="navbar">
+      <img src="pf.jpg" />
+      <div class="nav-brand" style="color: #000000">Portfolio</div>
+      <ul class="nav nav-tabs" style="margin: 0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/Task1/skill.html"
+            >Skill</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/Task1/course.html">Courses</a>
+        </li>
+        
+      </ul>
+    </div>
+    <!-- cards -->
+    <div class="cards" style="height: 10rem">
+      <div class="card" style="width: 18rem">
+        <img src="python.jpg" class="card-img-top" style="height: 280px" />
+
+        <div class="card-body">
+          <h5 class="card-title">Python</h5>
+          <p class="card-text">
+            I am a beginner Python programmer with a passion for crafting
+            efficient and robust solutions.
+          </p>
+
+          <!-- Button trigger modal -->
+          <button
+            type="button"
+            class="btn btn-outline-primary"
+            data-bs-toggle="modal"
+            data-bs-target="#pythonModal"
+          >
+            Learn more
+          </button>
+
+          <!-- Modal -->
+          <div
+            class="modal fade"
+            id="pythonModal"
+            tabindex="-1"
+            aria-labelledby="pythonModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="pythonModalLabel">Python:</h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <ul>
+                    <li>
+                      Solid understanding of Python syntax, data types, and
+                      control structures.
+                    </li>
+                    <li>
+                      Proficient in leveraging Python for algorithmic
+                      problem-solving.
+                    </li>
+                    <li>
+                      Experience in working with libraries such asNumPy and
+                      Pandas for data manipulation.
+                    </li>
+                    <li>
+                      Competency in handling and analyzing datasets to extract
+                      meaningful insights
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem">
+        <img src="css.jpg" class="card-img-top" style="height: 280px" />
+        <div class="card-body">
+          <h5 class="card-title">CSS</h5>
+          <p class="card-text">
+            As a proficient CSS developer, I bring a keen eye for design and a
+            commitment to crafting visually appealing and user-friendly
+            websites.
+          </p>
+          <!-- Button trigger modal -->
+          <button
+            type="button"
+            class="btn btn-outline-primary"
+            data-bs-toggle="modal"
+            data-bs-target="#CSSModal"
+          >
+            Learn more
+          </button>
+
+          <!-- Modal -->
+          <div
+            class="modal fade"
+            id="CSSModal"
+            tabindex="-1"
+            aria-labelledby="CSSModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="CSSModalLabel">CSS</h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <ul>
+                    <li>
+                      Expertise in creating responsive layouts using media
+                      queries for optimal viewing experiences on various
+                      devices.
+                    </li>
+                    <li>
+                      Ensuring seamless navigation and readability across
+                      desktops, tablets, and smartphones.
+                    </li>
+                    <li>
+                      Proficient in utilizing CSS Grid and Flexbox for efficient
+                      and flexible page layouts.
+                    </li>
+                    <li>
+                      Creating complex and responsive designs with ease,
+                      optimizing for different screen sizes.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem">
+        <img src="html.jpg" class="card-img-top" style="height: 280px" />
+        <div class="card-body">
+          <h5 class="card-title">HTML</h5>
+          <p class="card-text">
+            As a skilled HTML developer, I bring a deep understanding of the
+            fundamental building blocks of the web.
+          </p>
+          <!-- Button trigger modal -->
+          <button
+            type="button"
+            class="btn btn-outline-primary"
+            data-bs-toggle="modal"
+            data-bs-target="#htmlModal"
+          >
+            Learn more
+          </button>
+
+          <!-- Modal -->
+          <div
+            class="modal fade"
+            id="htmlModal"
+            tabindex="-1"
+            aria-labelledby="htmlModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="htmlModalLabel">HTML:</h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <ul>
+                    <li>
+                      Expertise in using semantic tags to enhance the structure
+                      and meaning of web content.
+                    </li>
+                    <li>
+                      Ensuring accessibility and search engine optimization
+                      through semantic markup.
+                    </li>
+                    <li>
+                      Proficient in creating responsive and adaptive layouts to
+                      provide a seamless experience across various devices.
+                    </li>
+                    <li>
+                      Implementing media queries and flexible grid systems for
+                      optimal viewing.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem">
+        <img src="java.jpg" class="card-img-top" style="height: 280px" />
+        <div class="card-body">
+          <h5 class="card-title">Java</h5>
+          <p class="card-text">
+            As a seasoned Java developer, I bring a wealth of experience in
+            building robust and scalable software solutions.
+          </p>
+          <!-- Button trigger modal -->
+          <button
+            type="button"
+            class="btn btn-outline-primary"
+            data-bs-toggle="modal"
+            data-bs-target="#javaModal"
+          >
+            Learn more
+          </button>
+
+          <!-- Modal -->
+          <div
+            class="modal fade"
+            id="javaModal"
+            tabindex="-1"
+            aria-labelledby="javaModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="javaModalLabel">JAVA:</h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <ul>
+                    <li>
+                      Solid understanding of core Java concepts, including data
+                      types, control structures, and object-oriented programming
+                      (OOP) principles.
+                    </li>
+                    <li>
+                      Proficient in handling exceptions, multithreading, and
+                      input/output operations.
+                    </li>
+                    <li>
+                      Extensive experience in Java EE for building scalable
+                      enterprise applications.
+                    </li>
+                    <li>
+                      Familiarity with concepts like servlets, JSP (JavaServer
+                      Pages), and EJB (Enterprise JavaBeans).
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem">
+        <img src="c.jpg" class="card-img-top" style="height: 280px" />
+        <div class="card-body">
+          <h5 class="card-title">C</h5>
+          <p class="card-text">
+            As a proficient C programmer, I bring a strong foundation in
+            low-level programming and systems development.
+          </p>
+          <!-- Button trigger modal -->
+          <button
+            type="button"
+            class="btn btn-outline-primary"
+            data-bs-toggle="modal"
+            data-bs-target="#cModal"
+          >
+            Learn more
+          </button>
+
+          <!-- Modal -->
+          <div
+            class="modal fade"
+            id="cModal"
+            tabindex="-1"
+            aria-labelledby="cModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="cModalLabel">C:</h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <ul>
+                    <li>
+                      Solid understanding of core C programming concepts,
+                      including variables, data types, control structures, and
+                      memory management.
+                    </li>
+                    <li>
+                      Proficient in working with pointers and understanding
+                      memory allocation.
+                    </li>
+                    <li>
+                      Strong problem-solving skills using C, with a focus on
+                      algorithmic efficiency and optimization.
+                    </li>
+                    <li>
+                      Ability to implement complex algorithms and data
+                      structures in C.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem">
+        <img src="c++.jpg" class="card-img-top" style="height: 280px" />
+        <div class="card-body">
+          <h5 class="card-title">C++</h5>
+          <p class="card-text">
+            As a seasoned C++ developer, I bring a wealth of experience in
+            crafting robust and efficient software solutions.
+          </p>
+          <!-- Button trigger modal -->
+          <button
+            type="button"
+            class="btn btn-outline-primary"
+            data-bs-toggle="modal"
+            data-bs-target="#cppModal"
+          >
+            Learn more
+          </button>
+
+          <!-- Modal -->
+          <div
+            class="modal fade"
+            id="cppModal"
+            tabindex="-1"
+            aria-labelledby="cppModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="cppModalLabel">C++:</h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <ul>
+                    <li>
+                      Expertise in leveraging OOP principles to design and
+                      implement modular and scalable code.
+                    </li>
+                    <li>
+                      Proficient in creating and utilizing classes, objects,
+                      inheritance, and polymorphism.
+                    </li>
+                    <li>
+                      In-depth knowledge of the STL for implementing data
+                      structures and algorithms.
+                    </li>
+                    <li>
+                      Skillful use of containers, iterators, and algorithms for
+                      efficient code development.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <p>&copy; 2024 Sandesh Bhonde. All Rights Reserved.</p>
+    </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    
+  </body>
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <title>Portfolio</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        align-items: center;
+        justify-content: center;
+        background-image: url(background.jpg);
+        border-image: fill 0 linear-gradient (#0001, #000);
+        backdrop-filter: blur(3px);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center center;
+        flex-direction: column;
+        height: 100vh;
+        overflow-x: hidden;
+        overflow-y: hidden;
+      }
+      h2,
+      h3 {
+        color: rgb(218, 229, 250);
+        font-size: 20px;
+        margin: 10px;
+        font-weight: 400;
+        font-family: Georgia, "Times New Roman", Times, serif;
+        backdrop-filter: blur(10px);
+      }
+      h2 {
+        font-weight: 600;
+        background-color: #0000006f;
+        border-radius: 50px;
+        width: fit-content;
+        padding: 10px;
+        margin-top: 40px;
+      }
+      h3 {
+        max-width: 500px;
+        background-color: #0000004c;
+        border-radius: 50px;
+        margin-left: 20px;
+        color: rgb(179, 194, 232);
+        word-spacing: 5;
+        padding: 20px;
+      }
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        margin: 0;
+        color: white;
+        background-color: rgba(219, 220, 221, 0.297);
+        position: relative;
+      }
+      .nav-brand {
+        font-size: 24px;
+        font-weight: 700;
+        margin-left: 0;
+      }
+      .nav-content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: rgba(92, 120, 148, 0.297);
+        transition: max-height 0.8s ease-in-out;
+        max-height: 0;
+        overflow: hidden;
+      }
+      .navbar:hover .nav-content {
+        max-height: 300px;
+      }
+      a {
+        margin: 10px 0;
+        padding: 0;
+      }
+      .button {
+        width: 130px;
+        padding: 10px;
+        margin-top: 30px;
+        margin-left: 20px;
+        border-radius: 30px;
+      }
+      img {
+        width: 30px;
+      }
+      .offcanvas-body {
+        background-color: #4e5aa782;
+        backdrop-filter: blur(100px);
+        color: #fff;
+        overflow-y: auto;
+      }
+      .offcanvas {
+        width: 40%;
+        background: local;
+        border-bottom: #000;
+      }
+      .offcanvas-header {
+        background-color: #f3f1f1;
+        padding-bottom: 25px;
+      }
+      .footer {
+        background-color: #333;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        margin-top: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navbar">
+      <img src="pf.jpg" />
+      <div class="nav-brand">Portfolio</div>
+      <ul class="nav nav-tabs" id="navbar">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="/Task1/skill.html"
+            >Skill</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/Task1/course.html">Courses</a>
+        </li>
+      </ul>
+    </div>
+
+    <h2>Sandesh Bhonde</h2>
+    <h3 data-aos="fade-up" data-aos-duration="2000">
+      I'am a Developer!
+      <hr />
+      Welcome to my portfolio! I am a passionate and dedicated for web
+      development.
+    </h3>
+    <!-- trigger -->
+    <button
+      style="margin-left: 40px"
+      class="btn btn-primary"
+      type="button"
+      data-bs-toggle="offcanvas"
+      data-bs-target="#offcanvasRight"
+      aria-controls="offcanvasRight"
+    >
+      Learn more
+    </button>
+
+    <div class="offcanvas">
+      <div
+        class="offcanvas offcanvas-end"
+        tabindex="-1"
+        id="offcanvasRight"
+        aria-labelledby="offcanvasRightLabel"
+      >
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasRightLabel">About me!</h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="offcanvas-body">
+          Throughout my career, I have had the opportunity to work on diverse
+          projects that showcase my ability. My approach involves a perfect
+          blend of creativity and technical expertise, ensuring that each
+          project I undertake is not only visually stunning but also
+          functionally robust. I am constantly seeking new challenges and
+          opportunities to expand my skill set. Feel free to explore my
+          portfolio to get a glimpse of my work, and don't hesitate to reach out
+          if you have any inquiries or collaboration ideas.
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="footer">
+      <p>&copy; 2024 Your Name. All Rights Reserved.</p>
+    </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      AOS.init();
+
+      // Activate Scrollspy
+      var scrollSpy = new bootstrap.ScrollSpy(document.body, {
+        target: "#navbar",
+      });
+    </script>
+  </body>
+</html>

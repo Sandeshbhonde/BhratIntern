@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <title>Portfolio</title>
+    <style>
+      body {
+        margin: 0;
+        overflow-y: auto;
+        overflow-x: auto;
+        padding: 0;
+        background-color: #c1bcbc63;
+        align-items: center;
+        justify-content: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        flex-direction: column;
+        height: 100vh;
+      }
+      
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        margin: 0;
+        color: white;
+        background-color: rgb(219, 220, 221);
+        position: relative;
+      }
+
+      .nav-brand {
+        font-size: 24px;
+        font-weight: 700;
+        margin-left: 0;
+        color: black;
+      }
+      .nav-content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: rgba(92, 120, 148, 0.297);
+        transition: max-height 0.8s ease-in-out;
+        max-height: 0;
+        overflow: hidden;
+      }
+      .navbar:hover .nav-content {
+        max-height: 300px;
+      }
+      a {
+        margin: 10px 0;
+        padding: 0;
+      }
+      img {
+        width: 30px;
+      }
+      .footer {
+        background-color: #090101;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        margin-top: 100%;
+      }
+      .cards {
+        display: flex;
+        padding: 10px;
+        margin: 20px;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin: 10px;
+      }
+      .card {
+        width: calc(33.33% - 20px);
+        margin: 20px;
+        padding: 0;
+        height: 250px;
+        font-size: smaller;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navbar">
+      <img src="pf.jpg" />
+      <div class="nav-brand">Portfolio</div>
+      <ul class="nav nav-tabs" style="margin: 0">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="/Task1/skill.html">Skill</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active"  href="/Task1/course.html">Courses</a>
+        </li>
+        
+      </ul>
+    </div>
+<div class="cards">
+  <div class="card">
+    <h5 class="card-header">Cisco</h5>
+    <div class="card-body">
+      <h5 class="card-title">Programming Essentials in Python</h5>
+      <p class="card-text">The graduate of the PCAP: Programming Essentials in Python course, provided by Cisco Networking Academy® in collaboration with
+        OpenEDG Python Institute.</p>
+      <a href="#" class="btn btn-outline-primary">Go to Link</a>
+    </div>
+  </div>
+  <div class="card">
+    <h5 class="card-header">Cognitive Class</h5>
+    <div class="card-body">
+      <h5 class="card-title">Data Science in python</h5>
+      <p class="card-text">I recently completed a comprehensive Data Science course using Python,
+        acquiring valuable skills in data analysis, machine learning, and
+        statistical modeling.</p>
+      <a href="#"  data-bs-target="#certificate" class="btn btn-outline-primary">Go to Link</a>
+      <img src="Cognitiveclass.jpg" id="certificate" alt="">
+    </div>
+  </div>
+  
+    <div class="footer">
+      <p>&copy; 2024 Your Name. All Rights Reserved.</p>
+    </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
